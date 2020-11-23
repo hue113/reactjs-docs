@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import tick from './components/tick';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <tick /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
