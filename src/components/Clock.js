@@ -7,17 +7,29 @@ class Clock extends Component {
     }
 
     componentDidMount() {
+        console.log ('did mount');
         this.timerID = setInterval(
             () => this.tick(),
             1000
         );
     }
+
+    /* We can combine tick() code inside componentDidMount like this: */
+    // componentDidMount() {
+    //     console.log ('did mount');
+    //     this.timerID = setInterval(
+    //         () => this.setState ({ date: new Date()})
+    //         ,1000
+    //     );
+    // }
   
     componentWillUnmount() {
+        console.log ('will mount');
         clearInterval(this.timerID);
     }
 
     tick() {
+        console.log ('tick setState');
         this.setState({
           date: new Date()
         });
