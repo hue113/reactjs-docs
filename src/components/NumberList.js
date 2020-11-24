@@ -3,7 +3,7 @@ import ListItem from './ListItem';
 
 function NumberList(props) {
     const numbers = props.numbers;
-    const listItems = numbers.map((number) =>
+    const listItems = numbers.map( (number) =>
         /* Correct! Key should be specified inside the array. */
         // <li key={number.toString()}>
         //     {number}
@@ -16,6 +16,15 @@ function NumberList(props) {
     return (
         <div>
             <ul>{listItems}</ul>
+
+            {/* We can also embed map() inline like this: */}
+            {/* <ul>
+                {numbers.map( (number) =>
+                    <ListItem key={number.toString()}
+                              value={number} />
+                )}
+            </ul> */}
+            
         </div>
     );
 }
